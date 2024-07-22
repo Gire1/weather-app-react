@@ -12,11 +12,11 @@ export default function App() {
         <Weather />
         <footer>
           This project was coded by{""}
-          <a href="https://earnest-haupia-0d9b3d.netlify.app/" target="_blank">
+          <a href="https://earnest-haupia-0d9b3d.netlify.app/" target="_blank" rel="noreferrer">
             Grace Chifamba
           </a>{" "}
           {""}and is{""}
-          <a href="#" target="_blank">
+          <a href="#" target="_blank" rel="noreferrer">
             open-sourced on GitHub{" "}
           </a>
         </footer>
