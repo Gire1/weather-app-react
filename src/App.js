@@ -12,7 +12,7 @@ export default function App() {
         <Weather defaultcity="Poortelizabeth"/>
         <footer>
           This project was coded by{""}
-          <a href="https://earnest-haupia-0d9b3d.netlify.app/" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Gire1/weather-app-react" target="_blank" rel="noreferrer">
             Grace Chifamba
           </a>{" "}
           {""}and is{""}
