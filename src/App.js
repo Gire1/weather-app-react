@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <h1>Weather App</h1>
-        <Weather />
+        <Weather defaultcity="Poortelizabeth"/>
         <footer>
           This project was coded by{""}
           <a href="https://earnest-haupia-0d9b3d.netlify.app/" target="_blank" rel="noreferrer">

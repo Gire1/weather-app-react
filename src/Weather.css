@@ -32,3 +32,11 @@
     font-size: 64px;
     font-weight: 400;
 }
+.Weather .unit{
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    line-height: 1;
+    top: -34px;
+    
+}
