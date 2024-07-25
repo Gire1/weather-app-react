@@ -9,14 +9,14 @@ export default function App() {
     <div className="App">
       <div className="container">
         <h1>Weather App</h1>
-        <Weather defaultcity="Poortelizabeth"/>
+        <Weather defaultcity="Lisbon"/>
         <footer>
           This project was coded by{""}
           <a href="https://github.com/Gire1/weather-app-react" target="_blank" rel="noreferrer">
             Grace Chifamba
           </a>{" "}
           {""}and is{""}
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Gire1/weather-app-react" target="_blank" rel="noreferrer">
             open-sourced on GitHub{" "}
           </a>
         </footer>
