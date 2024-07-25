@@ -25,6 +25,15 @@ export default function Weather(props){
     }
     function handleSubmit(event){
     event.preventDefault();
+    search(city)
+    }
+
+    function search(){  
+     const apiKey = "3f5te44f20dc10969a23fb1a9afo8c90";
+
+     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+     axios.get(apiUrl).then(handleResponse);
+
     }
 
     function handleCityChange(event){
@@ -51,11 +60,8 @@ export default function Weather(props){
    
 
 } else{  
-    const apiKey="3f5te44f20dc10969a23fb1a9afo8c90";
-    
-    let apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-     axios.get(apiUrl).then(handleResponse);
-
+    search();
+   
     return "Loading...";
 }
 }
