@@ -7,7 +7,7 @@ export default function WeatherInfor(props){
 <div className="WeatherInfor">
 <h1>{props.info.city}</h1>
     
-        <div className="row">
+        <div className="row mt-3">
             <div className="col-4">
         <ul>
         <li>
