@@ -16,7 +16,7 @@ export default function Weather(props){
             humidty: response.data.temperature.humidity,
             date:new Date(response.data.time * 1000),
             description:response.data.condition.description,
-            iconUrl:" http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png",
+            icon: response.data.condition.icon,
             wind:response.data.wind.speed,
             city:response.data.city
         });
@@ -25,13 +25,13 @@ export default function Weather(props){
     }
     function handleSubmit(event){
     event.preventDefault();
-    search(city)
+    search(city);
     }
 
     function search(){  
      const apiKey = "3f5te44f20dc10969a23fb1a9afo8c90";
 
-     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
      axios.get(apiUrl).then(handleResponse);
 
     }
