@@ -1,39 +1,37 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import WeatherIcon from "./WeatherIcon.js";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
-export default function WeatherInfor(props){
-    return(
-<div className="WeatherInfor">
-<h1>{props.info.city}</h1>
-    
-        <div className="row mt-3">
-            <div className="col-4">
-        <ul>
+export default function WeatherInfo(props) {
+  return (
+    <div className="WeatherInfo">
+      <h1>{props.data.city}</h1>
+      <ul>
         <li>
-            <FormattedDate date={props.infor.date }/>
-             </li>
-        <li className="text-capitalize">{props.infor.description}</li>
-    </ul>
-    </div>
-    <div className="col-4">
-        <div className="float-left">
-        <WeatherIcon code={props.infor.icon}alt={props.infor.icon}/>
-    
-     <span className="temperature"> {Math.round(props.infor.WeatherInfortemperature)}</span>
-     <span className="unit">℃</span>
-    </div>
-    </div>
-    <div className="col-4">
-        <ul>
-    
-            <li> Humidity:{props.infor.humidity}</li>
-            <li>Wind: {props.infor.wind}15km/h</li>
-        </ul>
+          <FormattedDate date={props.data.date} />
+        </li>
+        <li className="text-capitalize">{props.data.description}</li>
+      </ul>
+      <div className="row mt-3">
+        <div className="col-6">
+          <div className="d-flex">
+            <div>
+              <WeatherIcon code={props.data.icon} size={52} />
+            </div>
+
+            <div>
+              <WeatherTemperature celsius={props.data.temperature} />
+            </div>
+          </div>
         </div>
-     </div>
+        <div className="col-6">
+          <ul>
+            <li>Humidity: {props.data.humidity}%</li>
+            <li>Wind: {props.data.wind} km/h</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    
-    );
-    
+  );
 }
